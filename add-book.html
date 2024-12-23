@@ -38,24 +38,71 @@
         <h3 class="fw-normal">Nuovo libro</h3>
         <div class="row mt-4">
             <div class="col-6">
-                <label for="formGroupExampleInput" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Inserisci nome">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" placeholder="Inserisci nome">
             </div>
             <div class="col-6">
-                <label for="formGroupExampleInput2" class="form-label">Cognome</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Inserisci cognome">
+                <label for="gognome" class="form-label">Cognome</label>
+                <input type="text" class="form-control" id="cognome" placeholder="Inserisci cognome">
             </div>
         </div>
         <div class="row mt-3">
             <div class="col-12">
-                <label for="formGroupExampleInput3" class="form-label">Titolo</label>
-                <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="Inserisci titolo">
+                <label for="titolo" class="form-label">Titolo</label>
+                <input type="text" class="form-control" id="titolo" placeholder="Inserisci titolo">
+                <div id="passwordHelpBlock" class="form-text">
+                    Sottotitolo
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <label for="genere" class="form-label">Genere</label>
+                <select class="form-select" aria-label="Default select example" id="genere">
+                    <option selected>Scegli genere</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <label for="anno" class="form-label">Anno</label>
+                <input type="number" class="form-control" id="anno" placeholder="Inserisci anno" min="1900" max="2100">
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <label for="isbn" class="form-label">ISBN#</label>
+                <input type="number" class="form-control" id="isbn" placeholder="Inserisci ISBN#">
+            </div>
+        </div>
+        <div class="row mt-4 py-2 mx-auto">
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <label for="note" class="form-label">Note</label>
+                <textarea class="form-control" placeholder="Inserisci note" id="note" style="height: 100px"></textarea>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Disponibile digitale
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <button type="button" class="btn btn-primary fw-light">Aggiungi Libro</button>
             </div>
         </div>
     </form>
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
