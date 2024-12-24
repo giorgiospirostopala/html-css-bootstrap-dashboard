@@ -19,12 +19,12 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link text-light" href="#">Aggiungi Libro</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Sezione</a>
-                  </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="./add-book.html">Aggiungi libro</a>
+                    </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Sezione</a>
                   </li>
@@ -36,44 +36,56 @@
             </div>
           </nav>
     </header>
-    <form class="container py-4">
+    <form class="container py-4" action="./index.html">
         <h3 class="fw-normal">Nuovo libro</h3>
         <div class="row mt-4">
             <div class="col-6">
                 <label for="nome" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="nome" placeholder="Inserisci nome">
+                <input type="text" class="form-control" id="nome" placeholder="Inserisci nome" required>
             </div>
             <div class="col-6">
-                <label for="gognome" class="form-label">Cognome</label>
-                <input type="text" class="form-control" id="cognome" placeholder="Inserisci cognome">
+                <label for="cognome" class="form-label">Cognome</label>
+                <input type="text" class="form-control" id="cognome" placeholder="Inserisci cognome" required>
             </div>
         </div>
         <div class="row mt-3">
             <div class="col-12">
                 <label for="titolo" class="form-label">Titolo</label>
-                <input type="text" class="form-control" id="titolo" placeholder="Inserisci titolo">
+                <input type="text" class="form-control" id="titolo" placeholder="Inserisci titolo" required>
                 <div id="passwordHelpBlock" class="form-text">
-                    Sottotitolo
+                    Titolo versione italiana
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-12 col-lg-4 mt-3">
                 <label for="genere" class="form-label">Genere</label>
-                <select class="form-select" aria-label="Default select example" id="genere">
-                    <option selected>Scegli genere</option>
+                <select class="form-select" aria-label="Default select example" id="genere" required>
+                    <option value="" disabled selected>Scegli genere</option>
+                    <!-- 
+
+                        RICORDATI CHE:
+
+                        	•	L’opzione predefinita 👆🏼 deve avere un valore vuoto (value="")
+                                per essere considerata non valida dal browser.
+
+	                        •	Deve essere anche disabled, in modo che l’utente non possa selezionarla.
+
+                        ME RACCOMANDO.
+
+                    -->
                     <option value="1">One</option>
                     <option value="2">Two</option>
                     <option value="3">Three</option>
                 </select>
             </div>
-            <div class="col-12 col-lg-4  mt-3">
+            <div class="col-12 col-lg-4 mt-3">
                 <label for="anno" class="form-label">Anno</label>
-                <input type="number" class="form-control" id="anno" placeholder="Inserisci anno" min="1900" max="2100">
+                <input type="number" class="form-control" id="anno" placeholder="Inserisci anno" min="1800" max="2024" required>
             </div>
             <div class="col-12 col-lg-4 mt-3">
-                <label for="isbn" class="form-label">ISBN#</label>
-                <input type="number" class="form-control" id="isbn" placeholder="Inserisci ISBN#">
+                <label for="isbn" class="form-label" >ISBN#</label>
+                <input type="text" class="form-control" id="isbn" placeholder="Inserisci ISBN#" pattern="(\d{9}[\dX])|(\d{13})" title="Inserisci un ISBN valido di 10 cifre (può terminare con 'X') o 13 cifre" required>
             </div>
         </div>
         <div class="row mt-4 py-2 mx-auto">
@@ -97,7 +109,7 @@
         </div>
         <div class="row mt-3">
             <div class="col-12">
-                <button type="button" class="btn btn-primary fw-light">Aggiungi Libro</button>
+                <button type="submit" class="btn btn-primary fw-light">Aggiungi Libro</button>
             </div>
         </div>
     </form>
